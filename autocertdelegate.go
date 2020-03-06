@@ -298,6 +298,7 @@ type delegateCache struct{ c *Client }
 func (dc *delegateCache) Get(ctx context.Context, key string) ([]byte, error) {
 	rsa := strings.HasSuffix(key, "+rsa")
 	host := strings.TrimSuffix(key, "+rsa")
+	host = strings.TrimSuffix(key, "+token")
 
 	ctx, cancel := context.WithTimeout(ctx, dc.c.getCertTimeout())
 	defer cancel()
