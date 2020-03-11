@@ -1,4 +1,4 @@
-module github.com/bradfitz/autocertdelegate
+module github.com/kushtrimjunuzi/autocertdelegate
 
 go 1.13
 
